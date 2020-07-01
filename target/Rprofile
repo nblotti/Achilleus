@@ -6,7 +6,6 @@
 library(devtools)
 library("PerformanceAnalytics")
 
-.First <;- function(){
-  # Load up functions that I always want to be available.
-  source("/etc/opencpu/Base.R")
+.First<-function(){
+     source("/etc/opencpu/Base.R")
 }
