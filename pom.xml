@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ch.nblotti</groupId>
   <artifactId>R</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.6-SNAPSHOT</version>
   <name>r-server</name>
   <description>R server</description>
 
@@ -19,7 +19,7 @@
     <url>https://github.com/nblotti/R.git</url>
     <connection>scm:git:git://git@github.com/nblotti/R.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/nblotti/R.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>R-0.0.5-SNAPSHOT</tag>
   </scm>
 
   <properties>
