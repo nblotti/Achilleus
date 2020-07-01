@@ -1,4 +1,4 @@
 doOperation <- function(account) {
-  x <- rnorm(size, 2)
+  x <- rnorm(account, 2)
   return(x)
 }
