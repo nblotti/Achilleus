@@ -1,4 +1,4 @@
-test_rnorm <- function(size) {
+doOperation <- function(account) {
   x <- rnorm(size, 2)
   return(x)
 }
