@@ -1,0 +1,12 @@
+## Rprofile for OpenCPU cloud server.
+## Example of Rprofile
+#
+# options(width=65, digits=5)
+# options(show.signif.stars=FALSE)
+library(devtools)
+library("PerformanceAnalytics")
+
+.First <;- function(){
+  # Load up functions that I always want to be available.
+  source("/etc/opencpu/Base.R")
+}
