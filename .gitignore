@@ -2,6 +2,7 @@
 R.iml
 # Compiled class file
 *.class
+target/
 
 # Log file
 *.log

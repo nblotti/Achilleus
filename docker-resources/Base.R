@@ -1,5 +1,5 @@
 source_github <- function(strategyname) {
-  url <- paste('https://github.com/nblotti/R/strategy/', strategyname, '.R?raw=TRUE')
+  url <- paste('https://raw.githubusercontent.com/nblotti/R/master/strategy/', strategyname, '.R')
   devtools::source_url(url)
 
 }
