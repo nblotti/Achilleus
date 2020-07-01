@@ -1,6 +1,3 @@
-
-
-
 ### This is the system Rprofile file. It is always run on startup.
 ### Additional commands can be placed in site or user Rprofile files
 ### (see ?Rprofile).
@@ -74,9 +71,6 @@ local({
             warning(gettextf('package %s in options("defaultPackages") was not found', sQuote(pkg)),
                     call. = FALSE, domain = NA)
     }
-     library(devtools)
-     library("PerformanceAnalytics")
-     source("/etc/opencpu/Base.R")
 
 }
 
@@ -169,3 +163,12 @@ local({
     tests_startup <- Sys.getenv("R_TESTS")
     if(nzchar(tests_startup)) source(tests_startup)
 })
+
+.First <- function()
+{
+
+    library("devtools")
+    library("PerformanceAnalytics")
+    source("/etc/opencpu/Base.R")
+}
+
