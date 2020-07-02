@@ -1,0 +1,10 @@
+Package: nblottirstrategyproxy
+Type: Package
+Title: This package act as a wrapper for all stategy function
+Version: 0.1.0
+Author: Nicholas Blotti
+Maintainer: Nicholas Blotti <nblotti@gmail.com>
+Description: This package acts as a wrapper for all financial stategies function elligible through Alcibiade project
+License: GPL
+Encoding: UTF-8
+LazyData: true

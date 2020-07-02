@@ -1,0 +1,2 @@
+exportPattern("doOperation")
+importFrom("stats", "rnorm")

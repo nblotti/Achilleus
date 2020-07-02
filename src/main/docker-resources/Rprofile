@@ -169,6 +169,5 @@ local({
 
     library("devtools")
     library("PerformanceAnalytics")
-    source("/etc/opencpu/Base.R")
 }
 
