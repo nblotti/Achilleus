@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nblotti
-          image: nblotti/rocpu:v0.0.1
+          image: nblotti/rocpu:v0.0.15
           ports:
             - containerPort: 8080
       imagePullSecrets:
