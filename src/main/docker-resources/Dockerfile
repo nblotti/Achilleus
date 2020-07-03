@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y openjdk-11-jdk
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 RUN export JAVA_HOME
 
-ARG JAR_FILE=R-0.0.9-SNAPSHOT.jar
+ARG JAR_FILE=@project.artifactId@-@project.version@.jar
 COPY ${JAR_FILE} app.jar
 EXPOSE 8080
 CMD ["/bin/bash", "/usr/local/myscripts/myStartupScript.sh"]
