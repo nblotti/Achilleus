@@ -25,16 +25,24 @@ public class RController {
   @Value("${r.server.url}")
   String rServerUrl;
 
+  String argument = "{\"strategy\":\"%s\",\"account\":%s}";
+
   @PostMapping(value = "/")
-  public ResponseEntity<String> ftArticles(HttpServletResponse response, @RequestParam String firmName, @RequestParam LocalDate date) {
+  public ResponseEntity<String> ftArticles(HttpServletResponse response, @RequestParam String strategy, @RequestParam String account) {
 
 
     HttpHeaders headers = new HttpHeaders();
-    HttpEntity<String> request = new HttpEntity<String>(null,headers);
+    String body = String.format(argument, strategy, account);
+  //  headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    HttpEntity<String> request = new HttpEntity<String>(body,headers);
+
 
     return
       restTemplate.exchange(rServerUrl, HttpMethod.POST, request, String.class);
 
 
   }
+
+
 }
