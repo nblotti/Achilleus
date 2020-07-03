@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nblotti-rocpu
+  labels:
+    app: nblotti_rocpu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nblotti_rocpu
+  template:
+    metadata:
+      labels:
+        app: nblotti_rocpu
+    spec:
+      containers:
+        - name: nblotti
+          image: nblotti/rocpu:v0.0.1
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
