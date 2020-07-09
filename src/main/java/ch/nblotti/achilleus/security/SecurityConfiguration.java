@@ -1,4 +1,4 @@
-package ch.nblotti.r.security;
+package ch.nblotti.achilleus.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

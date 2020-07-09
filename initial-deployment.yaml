@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nblotti-rocpu
+  name: nblotti-achilleus
   labels:
-    app: nblotti_rocpu
+    app: nblotti_achilleus
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nblotti_rocpu
+      app: nblotti_achilleus
   template:
     metadata:
       labels:
-        app: nblotti_rocpu
+        app: nblotti_achilleus
     spec:
       containers:
         - name: nblotti
-          image: nblotti/rocpu:v0.0.15
+          image: nblotti/achilleus:v0.0.15
           ports:
             - containerPort: 8080
       imagePullSecrets:

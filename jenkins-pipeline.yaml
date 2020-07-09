@@ -13,22 +13,22 @@
   }
     stage('Cloning our Git') {
     steps {
-    sh "git clone git@github.com:nblotti/R.git r"
+    sh "git clone git@github.com:nblotti/achilleus.git achilleus"
 
   }
 
   }
     stage("Build & Deploy SNAPSHOT") {
     steps {
-    sh "mvn -f ./r/pom.xml -B deploy"
+    sh "mvn -f ./achilleus/pom.xml -B deploy"
     }
     }
     stage("Release") {
     steps {
-    sh "mvn -f ./r/pom.xml -B release:prepare"
-    sh "mvn -f ./r/pom.xml -B release:perform"
+    sh "mvn -f ./achilleus/pom.xml -B release:prepare"
+    sh "mvn -f ./achilleus/pom.xml -B release:perform"
     script {
-  pom =    readMavenPom file: './r/target/checkout/pom.xml'
+  pom =    readMavenPom file: './achilleus/target/checkout/pom.xml'
                                 version = pom.version
   }
   }
@@ -36,20 +36,20 @@
     stage('Building our image') {
     steps{
     script {
-    sh   "cd r/target/; docker build -t nblotti/rocpu:v${version} ."
+    sh   "cd achilleus/target/; docker build -t nblotti/achilleus:v${version} ."
   }
   }
   }
 
     stage('Deploy our image') {
     steps{
-    sh   "docker push nblotti/rocpu:v${version}"
+    sh   "docker push nblotti/achilleus:v${version}"
   }
   }
 
     stage('Kube deploy') {
     steps{
-    sh "kubectl set image deployment/nblotti-asset nblotti=nblotti/rocpu:v${version} --record"
+    sh "kubectl set image deployment/nblotti-achilleus nblotti=nblotti/achilleus:v${version} --record"
   }
   }
     stage('Cleaning up') {

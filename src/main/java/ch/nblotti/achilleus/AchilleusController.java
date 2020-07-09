@@ -1,4 +1,4 @@
-package ch.nblotti.r;
+package ch.nblotti.achilleus;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,12 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletResponse;
-import java.time.LocalDate;
-import java.util.Arrays;
 
 @RestController
-@RequestMapping("/r")
-public class RController {
+@RequestMapping("/achilleus")
+public class AchilleusController {
 
 
 

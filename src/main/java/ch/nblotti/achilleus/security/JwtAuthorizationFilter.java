@@ -1,4 +1,4 @@
-package ch.nblotti.r.security;
+package ch.nblotti.achilleus.security;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

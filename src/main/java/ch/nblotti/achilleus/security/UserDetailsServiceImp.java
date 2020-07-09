@@ -1,4 +1,4 @@
-package ch.nblotti.r.security;
+package ch.nblotti.achilleus.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

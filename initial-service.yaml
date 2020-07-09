@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nblotti-rocpu
+  name: nblotti-achilleus
 spec:
   selector:
-    app: nblotti_rocpu
+    app: nblotti_achilleus
   type: NodePort
   ports:
     - protocol: TCP
