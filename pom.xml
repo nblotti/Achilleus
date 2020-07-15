@@ -9,7 +9,7 @@
   </parent>
   <groupId>ch.nblotti</groupId>
   <artifactId>achilleus</artifactId>
-  <version>0.0.21-SNAPSHOT</version>
+  <version>0.0.21</version>
   <name>achilleus</name>
   <description>Achilleus</description>
 
@@ -25,7 +25,7 @@
     <url>https://github.com/nblotti/Achilleus.git</url>
     <connection>scm:git:git://git@github.com/nblotti/Achilleus.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/nblotti/Achilleus.git</developerConnection>
-    <tag>Achilleus-0.0.13</tag>
+    <tag>achilleus-0.0.21</tag>
   </scm>
 
   <properties>
