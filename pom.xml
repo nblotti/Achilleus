@@ -9,7 +9,7 @@
   </parent>
   <groupId>ch.nblotti</groupId>
   <artifactId>achilleus</artifactId>
-  <version>0.0.27</version>
+  <version>0.0.28-SNAPSHOT</version>
   <name>achilleus</name>
   <description>Achilleus</description>
 
