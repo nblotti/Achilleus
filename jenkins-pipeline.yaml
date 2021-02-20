@@ -8,16 +8,16 @@
     echo "M2_HOME = ${M2_HOME}"
     '''
 
-  }
+    }
 
-  }
+    }
     stage('Cloning our Git') {
     steps {
-    sh "git clone git@github.com:nblotti/achilleus.git achilleus"
+    sh "git clone git@github.com:nblotti/Achilleus.git achilleus"
 
-  }
+    }
 
-  }
+    }
     stage("Build & Deploy SNAPSHOT") {
     steps {
     sh "mvn -f ./achilleus/pom.xml -B deploy"
@@ -29,7 +29,7 @@
     sh "mvn -f ./achilleus/pom.xml -B release:perform"
     script {
   pom =    readMavenPom file: './achilleus/target/checkout/pom.xml'
-                                version = pom.version
+    version = pom.version
   }
   }
   }
@@ -46,7 +46,6 @@
     sh   "docker push nblotti/achilleus:v${version}"
   }
   }
-
     stage('Kube deploy') {
     steps{
     sh "kubectl set image deployment/nblotti-achilleus nblotti=nblotti/achilleus:v${version} --record"
